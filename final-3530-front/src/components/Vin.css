@@ -1,0 +1,194 @@
+/*::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}*/
+
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url(sky.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+  left: -1px;
+  top: -1px;
+  bottom: -1px;
+  position: fixed;
+  right: -1px;
+  background: /* top, transparent black, faked with gradient */
+  linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+}
+
+.highway {
+  height: 200px;
+  width: 500%;
+  display: block;
+  background-image: url(road.jpg);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: repeat-x;
+  animation: highway 5s linear infinite;
+}
+
+@keyframes highway {
+  100% {
+    transform: translateX(-5139px);
+  }
+}
+
+.city {
+  height: 200px;
+  width: 500%;
+  background-image: url(city.png);
+  position: fixed;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: city 20s linear infinite;
+}
+
+@keyframes city {
+  100% {
+      transform: translateX(-1400px);
+  }
+}
+
+.car {
+  width: 400px;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  z-index:2;
+  position: fixed;
+}
+
+.car img {
+  width: 100%;
+  animation: car 1s linear infinite;
+}
+
+@keyframes car {
+  100% {
+      transform: translateY(-1px);
+  }
+  50% {
+      transform: translateY(1px);
+  }
+  0% {
+      transform: translateY(-1px);
+  }
+}
+
+.wheel {
+  left: 50%;
+  bottom: 178px;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.wheel img {
+  width: 72px;
+  height: 72px;
+  animation: wheel 1s linear infinite;
+}
+
+.back-wheel {
+  left: -165px;
+  bottom: -170px;
+  position: absolute;
+}
+
+.front-wheel {
+  left: 80px;
+  bottom: -170px;
+  position: absolute;
+}
+
+@keyframes wheel {
+  100% {
+      transform: rotate(360deg)
+  }
+}
+
+.App {
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+  overflow: scroll;
+  height: 60vh;
+}
+
+.Title {
+  text-align: center;
+  font-family: "Copperplate", fantasy;
+  font-size: 100px;
+  color: white;
+  text-shadow: 6px 6px 3px #000000;
+
+}
+
+.Vin {
+  font: inherit;
+  font-size: calc(5px + 2vmin);
+  overflow: scroll;
+  z-index: 3;
+}
+
+.App-link {
+  color: puple;
+  position: relative;
+  z-index: 4;
+}
+.pg{
+  font-size: 18px;
+  position: relative;
+  overflow: scroll;
+  height: 50px;
+  border: 5px solid white;
+  padding: 20px;
+  margin: 10px;
+  font-size: 16px;
+  width: 80vw;
+  margin-left: auto;
+  margin-right:auto;
+  border-radius: 25px;
+  background-image: linear-gradient(rgb(120,120,120),rgb(120,120,120));
+
+}
+.about{
+  font-size: 26px;
+  text-shadow: 3px 3px 2px #000000;
+}
+.similiar{
+  text-decoration-line: underline;
+  text-decoration-thickness: auto;
+}
+.vals{
+  position: relative;
+  overflow: scroll;
+  max-height: 300px;
+  width: 80vw;
+  border: 5px solid white;
+  padding: 20px;
+  margin-top: 25px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  border-radius: 35px;
+  background-image: linear-gradient(rgb(180,180,180),rgb(180,180,180));
+
+}
